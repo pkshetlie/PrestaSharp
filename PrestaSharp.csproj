@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <HintPath>..\..\..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -54,6 +54,7 @@
     <Compile Include="Entities\AuxEntities\AssociationsCombination.cs" />
     <Compile Include="Entities\AuxEntities\address.cs" />
     <Compile Include="Entities\AuxEntities\AssociationsCustomer.cs" />
+    <Compile Include="Entities\AuxEntities\AssociationsGroup.cs" />
     <Compile Include="Entities\AuxEntities\AssociationsWarehouse.cs" />
     <Compile Include="Entities\AuxEntities\carrier.cs" />
     <Compile Include="Entities\AuxEntities\category.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Entities\AuxEntities\AssociationsCart.cs" />
     <Compile Include="Entities\AuxEntities\country.cs" />
     <Compile Include="Entities\AuxEntities\customer_message.cs" />
+    <Compile Include="Entities\AuxEntities\employee.cs" />
     <Compile Include="Entities\AuxEntities\shop.cs" />
     <Compile Include="Entities\AuxEntities\specific_price_rule.cs" />
     <Compile Include="Entities\AuxEntities\specific_price.cs" />
@@ -78,14 +80,19 @@
     <Compile Include="Entities\cart.cs" />
     <Compile Include="Entities\cart_row.cs" />
     <Compile Include="Entities\carrier.cs" />
+    <Compile Include="Entities\configuration.cs" />
     <Compile Include="Entities\customer_thread.cs" />
     <Compile Include="Entities\customer_message.cs" />
+    <Compile Include="Entities\employee.cs" />
+    <Compile Include="Entities\FilterEntities\configuration.cs" />
     <Compile Include="Entities\FilterEntities\customer_thread.cs" />
     <Compile Include="Entities\FilterEntities\customer_message.cs" />
+    <Compile Include="Entities\FilterEntities\employee.cs" />
     <Compile Include="Entities\FilterEntities\order_carrier.cs" />
     <Compile Include="Entities\FilterEntities\order_cart_rule.cs" />
     <Compile Include="Entities\FilterEntities\order_detail.cs" />
     <Compile Include="Entities\FilterEntities\order_history.cs" />
+    <Compile Include="Entities\FilterEntities\order_invoice.cs" />
     <Compile Include="Entities\FilterEntities\order_payment.cs" />
     <Compile Include="Entities\FilterEntities\product_supplier.cs" />
     <Compile Include="Entities\FilterEntities\specific_price_rule.cs" />
@@ -98,6 +105,7 @@
     <Compile Include="Entities\order_cart_rule.cs" />
     <Compile Include="Entities\order_detail.cs" />
     <Compile Include="Entities\order_history.cs" />
+    <Compile Include="Entities\order_invoice.cs" />
     <Compile Include="Entities\order_payment.cs" />
     <Compile Include="Entities\PrestaShopFactoryEntity.cs" />
     <Compile Include="Entities\product_supplier.cs" />
@@ -172,13 +180,16 @@
     <Compile Include="Factories\CombinationFactory.cs" />
     <Compile Include="Factories\CartFactory.cs" />
     <Compile Include="Factories\CarrierFactory.cs" />
+    <Compile Include="Factories\ConfigurationFactory.cs" />
     <Compile Include="Factories\CustomerThreadFactory.cs" />
     <Compile Include="Factories\CustomerMessageFactory.cs" />
+    <Compile Include="Factories\EmployeeFactory.cs" />
     <Compile Include="Factories\GenericFactory.cs" />
     <Compile Include="Factories\OrderCarrierFactory.cs" />
     <Compile Include="Factories\OrderCartRuleFactory.cs" />
     <Compile Include="Factories\OrderDetailFactory.cs" />
     <Compile Include="Factories\OrderHistoryFactory.cs" />
+    <Compile Include="Factories\OrderInvoiceFactory.cs" />
     <Compile Include="Factories\OrderPaymentFactory.cs" />
     <Compile Include="Factories\ProductSupplierFactory.cs" />
     <Compile Include="Factories\SpecificPriceRuleFactory.cs" />
@@ -223,9 +234,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>

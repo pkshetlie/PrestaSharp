@@ -8,7 +8,7 @@ namespace Bukimedia.PrestaSharp.Entities
 {
 	[XmlType(Namespace = "Bukimedia/PrestaSharp/Entities")]
 	public class specific_price : PrestaShopEntity, IPrestaShopFactoryEntity
-	{
+    {
 		public long? id { get; set; }
 		public long? id_shop_group { get; set; }
 		public long? id_shop { get; set; }
@@ -39,8 +39,10 @@ namespace Bukimedia.PrestaSharp.Entities
 		/// It´s a logical DateTime. Format YYYY-MM-DD HH:MM:SS.
 		/// </summary>
 		public string to { get; set; }
+        public string guid_group { get; set; }
+        public string guid_product { get; set; }
 
-		public specific_price()
+        public specific_price()
 		{
 			from = "0000-00-00 00:00:00";
 			to = "0000-00-00 00:00:00";

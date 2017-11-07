@@ -31,6 +31,11 @@ namespace Bukimedia.PrestaSharp.Entities
 		/// Required. MaxSize = 32.
 		/// </summary>
 		public string firstname { get; set; }
+
+        /// <summary>
+		/// Required. MaxSize = 60.
+		/// </summary>
+		public string username { get; set; }
 		/// <summary>
 		/// Required. MaxSize = 128. Must be an email.
 		/// </summary>
@@ -43,7 +48,8 @@ namespace Bukimedia.PrestaSharp.Entities
 		/// Must be an url
 		/// </summary>
 		public string website { get; set; }
-		public string company { get; set; }
+        public string token { get; set; }
+        public string company { get; set; }
 		public string siret { get; set; }
 		public string ape { get; set; }
 		public string ip_registration_newsletter { get; set; }

@@ -81,6 +81,10 @@ namespace Bukimedia.PrestaSharp.Entities
         public string reference { get; set; }
         public AuxEntities.AssociationsOrder associations { get; set; }
 
+
+        public string guid_employee { get; set; }
+        public long? id_employee { get; set; }
+
         public order()
         {
             this.associations = new AuxEntities.AssociationsOrder();

@@ -27,10 +27,13 @@ namespace Bukimedia.PrestaSharp.Entities
         /// </summary>
         public string date_upd { get; set; }       
         public List<Entities.AuxEntities.language> name { get; set; }
+        public AuxEntities.AssociationsGroup associations { get; set; }
 
         public group()
         {
             this.name = new List<AuxEntities.language>();
+            this.associations = new AuxEntities.AssociationsGroup();
+
         }
     }
 }

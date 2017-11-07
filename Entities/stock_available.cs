@@ -15,7 +15,7 @@ namespace Bukimedia.PrestaSharp.Entities
         public long? id_product_attribute { get; set; }
         public long? id_shop { get; set; }
         public long? id_shop_group { get; set; }
-        public int quantity { get; set; }
+        public decimal quantity { get; set; }
         /// <summary>
         /// It´s a logical bool.
         /// </summary>

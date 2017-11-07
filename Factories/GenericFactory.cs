@@ -23,6 +23,16 @@ namespace Bukimedia.PrestaSharp.Factories
             return this.Execute<T>(request);
         }
 
+        public T Get(Guid guid)
+        {
+            List<T> entities = this.GetByFilter(new Dictionary<string, string>() { { "guid", guid.ToString() } }, null, null);
+            if (entities.Count > 0)
+            {
+                return Get(entities.ElementAt(0).id.Value);
+            }
+            return null;
+        }
+
         public T Add(T Entity)
         {
             long? idAux = Entity.id;

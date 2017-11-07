@@ -8,15 +8,13 @@ using System.Xml.Serialization;
 namespace Bukimedia.PrestaSharp.Entities.AuxEntities
 {
     [XmlType(Namespace = "Bukimedia/PrestaSharp/Entities/AuxEntities")]
-    public class AssociationsCustomer : PrestaShopEntity
+    public class AssociationsGroup : PrestaShopEntity
     {
-        public List<AuxEntities.group> groups { get; set; }
-        public List<AuxEntities.employee> employees { get; set; }
+        public List<AuxEntities.category> categories { get; set; }
 
-		public AssociationsCustomer()
+        public AssociationsGroup()
         {
-			this.groups = new List<group>();
-			this.employees = new List<employee>();
+            this.categories = new List<category>();
         }
     }
 }

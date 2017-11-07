@@ -11,6 +11,7 @@ namespace Bukimedia.PrestaSharp.Entities.AuxEntities
     public class AssociationsProduct : PrestaShopEntity
     {
         public List<AuxEntities.category> categories { get; set; }
+        public List<AuxEntities.specific_price> specific_prices { get; set; }
         public List<AuxEntities.image> images { get; set; }
         public List<AuxEntities.combinations> combinations { get; set; }
         public List<AuxEntities.product_option_value> product_option_values { get; set; }
@@ -23,6 +24,7 @@ namespace Bukimedia.PrestaSharp.Entities.AuxEntities
         public AssociationsProduct()
         {
             this.categories = new List<category>();
+            this.specific_prices = new List<specific_price>();
             this.images = new List<image>();
             this.combinations = new List<combinations>();
             this.product_option_values = new List<product_option_value>();
